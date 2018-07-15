@@ -1,4 +1,4 @@
-package com.example.juli_soep.school;
+package com.example.juli_soep.school.welcome;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;

@@ -1,4 +1,4 @@
-package com.example.juli_soep.school;
+package com.example.juli_soep.school.welcome;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,6 +15,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.juli_soep.school.login.Login;
+import com.example.juli_soep.school.R;
 
 public class Slider extends AppCompatActivity {
 
