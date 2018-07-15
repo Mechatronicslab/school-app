@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:background="@drawable/welcome_slide_a"
-    tools:context="com.example.juli_soep.school.Login">
+    tools:context="com.example.juli_soep.school.login.Login">
 
     <RelativeLayout
         android:layout_width="wrap_content"
