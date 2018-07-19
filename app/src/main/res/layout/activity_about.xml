@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.juli_soep.school.main_menu.About">
+    tools:context=".features.main_menu.About">
 
     <ScrollView
         android:layout_width="match_parent"

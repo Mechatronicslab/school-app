@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/comming_soon"
-    tools:context="com.example.juli_soep.school.main_menu.Anggota">
+    tools:context=".features.main_menu.Anggota">
 
     <TextView
         android:layout_width="match_parent"

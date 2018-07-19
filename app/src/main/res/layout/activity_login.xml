@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:background="@drawable/welcome_slide_a"
-    tools:context="com.example.juli_soep.school.login.Login">
+    tools:context="com.example.juli_soep.school.features.login.Login">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -151,5 +151,23 @@
             android:textColor="@color/color_a" />
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <fr.castorflex.android.circularprogressbar.CircularProgressBar
+            style="@style/CircularThemeProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="false" />
+    </RelativeLayout>
+
+
 
 </RelativeLayout>

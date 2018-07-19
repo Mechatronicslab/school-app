@@ -1,6 +1,6 @@
 package com.example.juli_soep.school.network;
 
-import com.example.juli_soep.school.login.model.LoginResponse;
+import com.example.juli_soep.school.features.login.model.LoginResponse;
 
 import java.util.Map;
 

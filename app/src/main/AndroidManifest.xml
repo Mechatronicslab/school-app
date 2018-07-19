@@ -42,19 +42,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".main_menu.MainActivity"
+            android:name=".features.main_menu.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".login.Login"
+            android:name=".features.login.Login"
             android:screenOrientation="portrait"
             android:theme="@style/Slider" />
         <activity
-            android:name=".main_menu.Setting"
+            android:name=".features.main_menu.Setting"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".setting_menu.Profile"
+            android:name=".features.setting_menu.Profile"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
@@ -66,52 +66,52 @@
             android:value="AIzaSyBKz3przq7R_7UC5TZKtX1pqbypTny0YqU" />
 
         <activity
-            android:name=".main_menu.About"
+            android:name=".features.main_menu.About"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".setting_menu.Jurusan"
+            android:name=".features.setting_menu.Jurusan"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".setting_menu.in_jurusan.EditJurusan"
+            android:name=".features.setting_menu.in_jurusan.EditJurusan"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize|adjustPan" />
         <activity
-            android:name=".setting_menu.Periode"
+            android:name=".features.setting_menu.Periode"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".setting_menu.in_periode.EditPeriode"
+            android:name=".features.setting_menu.in_periode.EditPeriode"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".setting_menu.Jabatan"
+            android:name=".features.setting_menu.Jabatan"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".setting_menu.in_jabatan.EditJabatan"
+            android:name=".features.setting_menu.in_jabatan.EditJabatan"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".main_menu.Anggota"
+            android:name=".features.main_menu.Anggota"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".main_menu.Absensi"
+            android:name=".features.main_menu.Absensi"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".main_menu.Pembayaran"
+            android:name=".features.main_menu.Pembayaran"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".setting_menu.Pelajaran"
+            android:name=".features.setting_menu.Pelajaran"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".setting_menu.Kelas"
+            android:name=".features.setting_menu.Kelas"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
     </application>

@@ -223,6 +223,8 @@
     <style name="Base.Widget.AppCompat.TextView.SpinnerItem" parent="android:Widget.Material.TextView.SpinnerItem"/>
     <style name="Base.Widget.AppCompat.Toolbar.Button.Navigation" parent="android:Widget.Material.Toolbar.Button.Navigation">
     </style>
+    <style name="CPB" parent="android:Widget.Material.ProgressBar">
+    </style>
     <style name="Platform.AppCompat" parent="Platform.V21.AppCompat"/>
     <style name="Platform.AppCompat.Light" parent="Platform.V21.AppCompat.Light"/>
     <style name="Platform.ThemeOverlay.AppCompat" parent="">
@@ -300,5 +302,8 @@
         <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
         <item name="android:textColor">@color/secondary_text_default_material_light</item>
         <item name="android:textSize">@dimen/notification_action_text_size</item>
+    </style>
+    <style name="Widget.Design.AppBarLayout" parent="Base.Widget.Design.AppBarLayout">
+        <item name="android:stateListAnimator">@anim/design_appbar_state_list_animator</item>
     </style>
 </resources>

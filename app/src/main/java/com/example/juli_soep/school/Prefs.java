@@ -3,7 +3,7 @@ package com.example.juli_soep.school;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.example.juli_soep.school.login.model.Result;
+import com.example.juli_soep.school.features.login.model.Result;
 
 /**
  * Created by github.com/adip28 on 7/17/2018.

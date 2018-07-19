@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\gakga\\Downloads\\fix\\School\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "E:\\kuliah\\project\\Lab Mekatronik\\school-app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\gakga\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\86d18b4b052379078c29f8c8b76b56cd\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Adi Permana\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\19b94be05942ac8cd1237e9a5fe1e93b\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.juli_soep.school.setting_menu.Profile">
+    tools:context=".features.setting_menu.Profile">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,11 +36,11 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <com.example.juli_soep.school.tab.SlidingTabLayout
+                <com.example.juli_soep.school.ui.tab.SlidingTabLayout
                     android:id="@+id/stl_tabs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                </com.example.juli_soep.school.tab.SlidingTabLayout>
+                </com.example.juli_soep.school.ui.tab.SlidingTabLayout>
                 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/vp_tabs"

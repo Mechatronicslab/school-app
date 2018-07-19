@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.juli_soep.school.fragment.SejarahFragment">
+    tools:context=".features.fragment.SejarahFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

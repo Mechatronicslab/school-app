@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.juli_soep.school.login.Login;
+import com.example.juli_soep.school.features.login.Login;
 import com.example.juli_soep.school.R;
 
 public class Slider extends AppCompatActivity {
