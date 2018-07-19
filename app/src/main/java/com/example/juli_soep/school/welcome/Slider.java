@@ -124,7 +124,7 @@ public class Slider extends AppCompatActivity {
     }
 
     private void startMainActivity(){
-        setFirstTimeStartStatus(true);
+        setFirstTimeStartStatus(false);
         startActivity(new Intent(Slider.this, Login.class));
         finish();
     }

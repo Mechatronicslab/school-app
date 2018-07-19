@@ -6,17 +6,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.example.juli_soep.school.Prefs;
 import com.example.juli_soep.school.R;
+import com.example.juli_soep.school.login.Login;
 
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout btn_setting, btn_about, btn_absensi, btn_anggota, btn_pembayaran;
-
+    LinearLayout btn_setting, btn_about, btn_absensi, btn_anggota, btn_pembayaran,btn_logout;
+    Prefs session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        session = new Prefs(this);
+        if (!session.isLoggedIn()) {
+            finish();
+            startActivity(new Intent(this, Login.class));
+        }
         btn_setting = (LinearLayout)findViewById(R.id.btn_setting);
         btn_setting.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,5 +72,20 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        btn_logout = (LinearLayout)findViewById(R.id.btn_logout);
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                logout();
+            }
+        });
+
+
+    }
+    private void logout() {
+        session.logout();
+        finish();
+        startActivity(new Intent(this, Login.class));
     }
 }

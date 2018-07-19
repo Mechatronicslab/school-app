@@ -37,5 +37,7 @@
     <color name="colorAquaDark">#3BAFDA</color>
     <color name="colorPinkRose">#EC87C0</color>
     <color name="colorPinkRoseDark">#D770AD</color>
+    <color name="redCrimson">#af3c3c</color>
+    <color name="material_green_800">#307d3d</color>
 
 </resources>
