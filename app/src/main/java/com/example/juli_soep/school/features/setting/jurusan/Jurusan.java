@@ -22,7 +22,7 @@ public class Jurusan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jurusan);
 
-        btn_edit = (LinearLayout)findViewById(R.id.list_jurusan);
+        /*btn_edit = (LinearLayout)findViewById(R.id.list_jurusan);
         btn_edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,7 +42,7 @@ public class Jurusan extends AppCompatActivity {
                     }, 2000);
                 }
             }
-        });
+        });*/
     }
 
     @Override
