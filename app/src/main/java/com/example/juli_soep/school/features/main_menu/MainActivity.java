@@ -5,24 +5,33 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
-import com.example.juli_soep.school.Prefs;
+import com.example.juli_soep.school.App;
+import com.example.juli_soep.school.Prefs2;
 import com.example.juli_soep.school.R;
 import com.example.juli_soep.school.features.login.Login;
+import com.example.juli_soep.school.features.login.model.LoginResponse;
+import com.example.juli_soep.school.features.setting.Setting;
+import com.example.juli_soep.school.util.GsonHelper;
 
 public class MainActivity extends AppCompatActivity {
 
     LinearLayout btn_setting, btn_about, btn_absensi, btn_anggota, btn_pembayaran,btn_logout;
-    Prefs session;
+    Prefs2 session;
+    private LoginResponse mProfile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        session = new Prefs(this);
-        if (!session.isLoggedIn()) {
-            finish();
-            startActivity(new Intent(this, Login.class));
-        }
+        session = new Prefs2(this);
+        mProfile = (LoginResponse) GsonHelper.parseGson(
+                App.getPref().getString(Prefs2.PREF_STORE_PROFILE, ""),
+                new LoginResponse()
+        );
+        String name = (mProfile.getResult().getNama().contains(" "))
+                ? mProfile.getResult().getNama().split(" ")[3] : mProfile.getResult().getNama();
+        Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
         btn_setting = (LinearLayout)findViewById(R.id.btn_setting);
         btn_setting.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void logout() {
-        session.logout();
+        //session.logout();
         finish();
         startActivity(new Intent(this, Login.class));
     }

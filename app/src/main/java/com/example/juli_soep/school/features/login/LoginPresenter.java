@@ -2,6 +2,9 @@ package com.example.juli_soep.school.features.login;
 
 import android.util.Log;
 
+import com.example.juli_soep.school.App;
+import com.example.juli_soep.school.Prefs;
+import com.example.juli_soep.school.Prefs2;
 import com.example.juli_soep.school.features.login.model.LoginResponse;
 import com.example.juli_soep.school.network.NetworkService;
 import com.example.juli_soep.school.network.RestService;
@@ -13,6 +16,7 @@ import okhttp3.Request;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
+
 
 
 /**
@@ -28,18 +32,18 @@ public class LoginPresenter {
         restService = RestService.getRetroftInstance();
     }
 
-    /*boolean isLoggedIn(){
-        return App.getPref().getBoolean(Prefs.PREF_IS_LOGEDIN, true);
+    boolean isLoggedIn(){
+        return App.getPref().getBoolean(Prefs2.PREF_IS_LOGEDIN, false);
     }
     void storeProfile(String data){
-        App.getPref().put(Prefs.PREF_STORE_PROFILE, data);
-        App.getPref().put(Prefs.PREF_IS_LOGEDIN, true);
-    }*/
+        App.getPref().put(Prefs2.PREF_STORE_PROFILE, data);
+        App.getPref().put(Prefs2.PREF_IS_LOGEDIN, true);
+    }
 
     void login(String username, String password){
         HashMap<String,Object> params = new HashMap<>();
         params.put("tag","login");
-        params.put("email",username);
+        params.put("username",username);
         params.put("password", password);
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder().addInterceptor(chain -> {
@@ -57,7 +61,9 @@ public class LoginPresenter {
             public void onResponse(Call<LoginResponse> call, retrofit2.Response<LoginResponse> response) {
                 view.hideLoadingIndicator();
                 if(response.body().getSuccess()) {
-
+                    //Prefs.getInstance(getApplicationContext()).setProfile(response.body().getResult());
+                    App.getPref().put(Prefs2.PREF_IS_LOGEDIN, true);
+                    //App.getPref().put(Prefs2.PREF_USERNAME, response.body().getResult().getUsername());
                     view.onSigninSuccess(response.body());
                 } else {
                     view.onRequestFailed(response.body().getRm());

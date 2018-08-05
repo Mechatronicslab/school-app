@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.example.juli_soep.school.R;
-import com.example.juli_soep.school.features.setting_menu.Jabatan;
+import com.example.juli_soep.school.features.setting.jabatan.Jabatan;
 
 import java.util.ArrayList;
 import java.util.List;

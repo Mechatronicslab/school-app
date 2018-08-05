@@ -10,7 +10,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 
 import com.example.juli_soep.school.R;
-import com.example.juli_soep.school.features.setting_menu.Periode;
+import com.example.juli_soep.school.features.setting.periode.Periode;
 
 import java.util.Calendar;
 

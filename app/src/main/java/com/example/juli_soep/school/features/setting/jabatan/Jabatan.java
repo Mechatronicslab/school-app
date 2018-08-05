@@ -1,4 +1,4 @@
-package com.example.juli_soep.school.features.setting_menu;
+package com.example.juli_soep.school.features.setting.jabatan;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -9,26 +9,26 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.juli_soep.school.R;
-import com.example.juli_soep.school.features.main_menu.Setting;
-import com.example.juli_soep.school.features.setting_menu.in_jurusan.EditJurusan;
+import com.example.juli_soep.school.features.setting.Setting;
+import com.example.juli_soep.school.features.setting_menu.in_jabatan.EditJabatan;
 
-public class Jurusan extends AppCompatActivity {
+public class Jabatan extends AppCompatActivity {
 
-    LinearLayout btn_edit;
+    LinearLayout edit_jabatan;
     boolean doubleTap = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jurusan);
+        setContentView(R.layout.activity_jabatan);
 
-        btn_edit = (LinearLayout)findViewById(R.id.list_jurusan);
-        btn_edit.setOnClickListener(new View.OnClickListener() {
+        edit_jabatan = (LinearLayout)findViewById(R.id.list_jabatan);
+        edit_jabatan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (doubleTap){
-                    Intent edit_jurusan = new Intent(Jurusan.this, EditJurusan.class);
-                    startActivity(edit_jurusan);
+                    Intent edit_jabatan = new Intent(Jabatan.this, EditJabatan.class);
+                    startActivity(edit_jabatan);
                     finish();
                 }else {
                     Toast.makeText(getApplicationContext(), "Tekan Sekali Lagi Untuk Mengubah Data", Toast.LENGTH_LONG).show();
@@ -47,8 +47,10 @@ public class Jurusan extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent kembali = new Intent(Jurusan.this, Setting.class);
+        Intent kembali = new Intent(Jabatan.this, Setting.class);
         startActivity(kembali);
         finish();
     }
+
+
 }

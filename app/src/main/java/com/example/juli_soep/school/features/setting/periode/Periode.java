@@ -1,4 +1,4 @@
-package com.example.juli_soep.school.features.setting_menu;
+package com.example.juli_soep.school.features.setting.periode;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.juli_soep.school.R;
-import com.example.juli_soep.school.features.main_menu.Setting;
+import com.example.juli_soep.school.features.setting.Setting;
 import com.example.juli_soep.school.features.setting_menu.in_periode.EditPeriode;
 
 public class Periode extends AppCompatActivity {

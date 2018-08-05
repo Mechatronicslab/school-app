@@ -1,11 +1,11 @@
-package com.example.juli_soep.school.features.setting_menu;
+package com.example.juli_soep.school.features.setting.kelas;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.juli_soep.school.R;
-import com.example.juli_soep.school.features.main_menu.Setting;
+import com.example.juli_soep.school.features.setting.Setting;
 
 public class Kelas extends AppCompatActivity {
 

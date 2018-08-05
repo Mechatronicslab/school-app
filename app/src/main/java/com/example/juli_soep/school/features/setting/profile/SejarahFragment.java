@@ -1,4 +1,4 @@
-    package com.example.juli_soep.school.features.fragment;
+    package com.example.juli_soep.school.features.setting.profile;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

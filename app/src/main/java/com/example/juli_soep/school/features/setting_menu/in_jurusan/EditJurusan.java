@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 import com.example.juli_soep.school.R;
-import com.example.juli_soep.school.features.setting_menu.Jurusan;
+import com.example.juli_soep.school.features.setting.jurusan.Jurusan;
 
 public class EditJurusan extends AppCompatActivity {
 

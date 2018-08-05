@@ -11,10 +11,10 @@ import android.text.Spanned;
 import android.text.style.ImageSpan;
 
 import com.example.juli_soep.school.R;
-import com.example.juli_soep.school.features.fragment.KontakFragment;
-import com.example.juli_soep.school.features.fragment.MisiFragment;
-import com.example.juli_soep.school.features.fragment.SejarahFragment;
-import com.example.juli_soep.school.features.fragment.VisiFragment;
+import com.example.juli_soep.school.features.setting.profile.KontakFragment;
+import com.example.juli_soep.school.features.setting.profile.MisiFragment;
+import com.example.juli_soep.school.features.setting.profile.SejarahFragment;
+import com.example.juli_soep.school.features.setting.profile.VisiFragment;
 
 /**
  * Created by juli_soep on 14/07/2018.

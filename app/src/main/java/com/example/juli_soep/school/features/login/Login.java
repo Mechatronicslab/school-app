@@ -17,6 +17,7 @@ import com.example.juli_soep.school.features.main_menu.MainActivity;
 import com.example.juli_soep.school.R;
 import com.example.juli_soep.school.ui.SweetDialogs;
 import com.example.juli_soep.school.ui.TopSnakbar;
+import com.google.gson.Gson;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -53,7 +54,7 @@ public class Login extends AppCompatActivity implements ILoginView,View.OnClickL
         handler.postDelayed(runnable, 2000);
         presenter = new LoginPresenter(this);
         session = new Prefs(this);
-        if (session.isLoggedIn())
+        if (presenter.isLoggedIn())
             this.goToDashboard();
         else this.initViews();
 
@@ -91,8 +92,8 @@ public class Login extends AppCompatActivity implements ILoginView,View.OnClickL
     @Override
     public void onSigninSuccess(LoginResponse response) {
         Log.i(TAG, "Login success");
-        //session.setProfile(new Gson().toJson(response));
-        Prefs.getInstance(getApplicationContext()).setProfile(response.getResult());
+        presenter.storeProfile(new Gson().toJson(response));
+        //Prefs.getInstance(getApplicationContext()).setProfile(response.getResult());
         //presenter.storeAccessToken(response.getResult().getAccessToken());
         Toast.makeText(this, "Signin berhasil", Toast.LENGTH_SHORT).show();
         this.goToDashboard();
