@@ -93,8 +93,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void logout() {
-        //session.logout();
-        finish();
+        App.getPref().clear();
+
         startActivity(new Intent(this, Login.class));
+        finish();
     }
 }

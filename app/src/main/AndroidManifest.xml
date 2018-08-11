@@ -71,7 +71,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".features.setting.jurusan.Jurusan"
+            android:name=".features.setting.jurusan.JurusanActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
@@ -80,7 +80,7 @@
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize|adjustPan" />
         <activity
-            android:name=".features.setting.periode.Periode"
+            android:name=".features.setting.periode.PeriodeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
@@ -88,7 +88,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".features.setting.jabatan.Jabatan"
+            android:name=".features.setting.jabatan.JabatanActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity

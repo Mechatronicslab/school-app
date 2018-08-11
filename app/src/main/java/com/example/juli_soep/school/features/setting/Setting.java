@@ -7,11 +7,11 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.juli_soep.school.features.main_menu.MainActivity;
-import com.example.juli_soep.school.features.setting.jabatan.Jabatan;
-import com.example.juli_soep.school.features.setting.jurusan.Jurusan;
+import com.example.juli_soep.school.features.setting.jabatan.JabatanActivity;
+import com.example.juli_soep.school.features.setting.jurusan.JurusanActivity;
 import com.example.juli_soep.school.features.setting.kelas.Kelas;
 import com.example.juli_soep.school.features.setting.pelajaran.Pelajaran;
-import com.example.juli_soep.school.features.setting.periode.Periode;
+import com.example.juli_soep.school.features.setting.periode.PeriodeActivity;
 import com.example.juli_soep.school.features.setting.profile.Profile;
 import com.example.juli_soep.school.R;
 import com.google.android.gms.maps.GoogleMap;
@@ -59,7 +59,7 @@ public class Setting extends AppCompatActivity {
         btn_jurusan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jurusan = new Intent(Setting.this, Jurusan.class);
+                Intent jurusan = new Intent(Setting.this, JurusanActivity.class);
                 startActivity(jurusan);
                 finish();
             }
@@ -69,7 +69,7 @@ public class Setting extends AppCompatActivity {
         btn_periode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent periode = new Intent(Setting.this, Periode.class);
+                Intent periode = new Intent(Setting.this, PeriodeActivity.class);
                 startActivity(periode);
                 finish();
             }
@@ -79,7 +79,7 @@ public class Setting extends AppCompatActivity {
         btn_jabatan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent jabatan = new Intent(Setting.this, Jabatan.class);
+                Intent jabatan = new Intent(Setting.this, JabatanActivity.class);
                 startActivity(jabatan);
                 finish();
             }

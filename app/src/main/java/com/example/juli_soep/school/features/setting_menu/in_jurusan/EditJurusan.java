@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 import com.example.juli_soep.school.R;
-import com.example.juli_soep.school.features.setting.jurusan.Jurusan;
+import com.example.juli_soep.school.features.setting.jurusan.JurusanActivity;
 
 public class EditJurusan extends AppCompatActivity {
 
@@ -21,7 +21,7 @@ public class EditJurusan extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent kembali = new Intent(EditJurusan.this, Jurusan.class);
+        Intent kembali = new Intent(EditJurusan.this, JurusanActivity.class);
         startActivity(kembali);
         finish();
     }

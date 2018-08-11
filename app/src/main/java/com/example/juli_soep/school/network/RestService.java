@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by github.com/adip28 on 7/17/2018.
  */
 public class RestService {
-    private static final String BASE_URL = "http://192.168.100.11/sekolah/api-school-app/index.php/";
+    private static final String BASE_URL = "http://192.168.100.8/api-school-app/";
     private static Retrofit retrofit;
 
     public static Retrofit getRetroftInstance() {

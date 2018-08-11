@@ -10,7 +10,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 
 import com.example.juli_soep.school.R;
-import com.example.juli_soep.school.features.setting.periode.Periode;
+import com.example.juli_soep.school.features.setting.periode.PeriodeActivity;
 
 import java.util.Calendar;
 
@@ -69,7 +69,7 @@ public class EditPeriode extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent kembali = new Intent(EditPeriode.this, Periode.class);
+        Intent kembali = new Intent(EditPeriode.this, PeriodeActivity.class);
         startActivity(kembali);
         finish();
     }

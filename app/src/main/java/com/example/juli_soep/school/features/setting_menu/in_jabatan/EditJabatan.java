@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.example.juli_soep.school.R;
-import com.example.juli_soep.school.features.setting.jabatan.Jabatan;
+import com.example.juli_soep.school.features.setting.jabatan.JabatanActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +48,7 @@ public class EditJabatan extends AppCompatActivity implements AdapterView.OnItem
 
     @Override
     public void onBackPressed() {
-        Intent kembali = new Intent(EditJabatan.this, Jabatan.class);
+        Intent kembali = new Intent(EditJabatan.this, JabatanActivity.class);
         startActivity(kembali);
         finish();
     }

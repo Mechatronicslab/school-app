@@ -35,6 +35,7 @@ public class LoginPresenter {
     boolean isLoggedIn(){
         return App.getPref().getBoolean(Prefs2.PREF_IS_LOGEDIN, false);
     }
+
     void storeProfile(String data){
         App.getPref().put(Prefs2.PREF_STORE_PROFILE, data);
         App.getPref().put(Prefs2.PREF_IS_LOGEDIN, true);
