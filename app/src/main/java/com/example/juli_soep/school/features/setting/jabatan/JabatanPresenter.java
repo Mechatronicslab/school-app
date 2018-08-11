@@ -1,8 +1,8 @@
-package com.example.juli_soep.school.features.setting.jurusan;
+package com.example.juli_soep.school.features.setting.jabatan;
 
 import android.util.Log;
 
-import com.example.juli_soep.school.features.setting.jurusan.model.Jurusan;
+import com.example.juli_soep.school.features.setting.jabatan.model.Jabatan;
 import com.example.juli_soep.school.network.NetworkService;
 import com.example.juli_soep.school.network.RestService;
 
@@ -14,30 +14,31 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class JurusanPresenter {
+public class JabatanPresenter {
     private final String TAG = "Jabatan Presenter";
-    private final IJurusanView view;
+    private final IjabatanView view;
     private final Retrofit restService;
 
-    public JurusanPresenter(IJurusanView view) {
+    public JabatanPresenter(IjabatanView view) {
         this.view = view;
         restService = RestService.getRetroftInstance();
     }
 
-    void getJurusan(){
+
+    void getJabatan(){
         HashMap<String,Object> params = new HashMap<>();
-        params.put("tag","getJurusan");
+        params.put("tag","getJabatan");
 
         view.showLoadingIndicator();
-        restService.newBuilder().client(RestService.getClient()).build().create(NetworkService.class).getJurusan(params)
-                .enqueue(new Callback<List<Jurusan>>(){
+        restService.newBuilder().client(RestService.getClient()).build().create(NetworkService.class).getJabatan(params)
+                .enqueue(new Callback<List<Jabatan>>(){
             @Override
-            public void onResponse(Call<List<Jurusan>> call, Response<List<Jurusan>> response) {
+            public void onResponse(Call<List<Jabatan>> call, Response<List<Jabatan>> response) {
                 view.hideLoadingIndicator();
-                    view.onDataReady(response.body());
+                view.onDataReady(response.body());
             }
             @Override
-            public void onFailure(Call<List<Jurusan>> call, Throwable t) {
+            public void onFailure(Call<List<Jabatan>> call, Throwable t) {
                 view.hideLoadingIndicator();
                 view.onNetworkFailed();
             }

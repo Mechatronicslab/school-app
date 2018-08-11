@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.juli_soep.school.R;
@@ -28,6 +30,8 @@ public class JabatanActivity extends AppCompatActivity implements IjabatanView, 
     private final String TAG = "Jabatan Activity";
     @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
+    @BindView(R.id.loading_layout)
+    RelativeLayout mLoadingIndicator;
     private JabatanPresenter presenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,5 +86,13 @@ public class JabatanActivity extends AppCompatActivity implements IjabatanView, 
         Toast.makeText(this, model.getKdJabatan(),Toast.LENGTH_LONG).show();
     }
 
+    @Override
+    public void showLoadingIndicator() {
+        mLoadingIndicator.setVisibility(View.VISIBLE);
+    }
 
+    @Override
+    public void hideLoadingIndicator() {
+        mLoadingIndicator.setVisibility(View.GONE);
+    }
 }

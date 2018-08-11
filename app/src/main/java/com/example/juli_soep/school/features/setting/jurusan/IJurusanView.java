@@ -15,4 +15,8 @@ public interface IJurusanView {
 
 
     void onNetworkFailed();
+
+    void showLoadingIndicator();
+
+    void hideLoadingIndicator();
 }

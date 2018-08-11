@@ -29,16 +29,17 @@ public class PeriodePresenter {
         HashMap<String,Object> params = new HashMap<>();
         params.put("tag","getPeriode");
 
-        //view.showLoadingIndicator();
+        view.showLoadingIndicator();
         restService.newBuilder().client(RestService.getClient()).build().create(NetworkService.class).getPeriode(params)
                 .enqueue(new Callback<List<Periode>>(){
                     @Override
                     public void onResponse(Call<List<Periode>> call, Response<List<Periode>> response) {
+                        view.hideLoadingIndicator();
                         view.onDataReady(response.body());
                     }
                     @Override
                     public void onFailure(Call<List<Periode>> call, Throwable t) {
-                        Log.i(TAG, "onFailure: " + t.getMessage());
+                        view.hideLoadingIndicator();
                         view.onNetworkFailed();
                     }
                 });

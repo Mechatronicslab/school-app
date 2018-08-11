@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.juli_soep.school.R;
@@ -31,6 +33,8 @@ public class PeriodeActivity extends AppCompatActivity implements IPeriodeView, 
     private final String TAG = "Periode Activity";
     @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
+    @BindView(R.id.loading_layout)
+    RelativeLayout mLoadingIndicator;
     private PeriodePresenter presenter;
 
     @Override
@@ -85,6 +89,16 @@ public class PeriodeActivity extends AppCompatActivity implements IPeriodeView, 
     @Override
     public void onSelect(Periode model) {
         Toast.makeText(this, model.getKdPeriode(),Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void showLoadingIndicator() {
+        mLoadingIndicator.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideLoadingIndicator() {
+        mLoadingIndicator.setVisibility(View.GONE);
     }
 
 }

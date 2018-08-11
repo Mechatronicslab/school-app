@@ -13,4 +13,7 @@ public interface IjabatanView {
 
     void onNetworkFailed();
 
+    void showLoadingIndicator();
+
+    void hideLoadingIndicator();
 }

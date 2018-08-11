@@ -14,4 +14,8 @@ public interface IPeriodeView {
     void onNetworkFailed();
 
     void onSelect(Periode model);
+
+    void showLoadingIndicator();
+
+    void hideLoadingIndicator();
 }

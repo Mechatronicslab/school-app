@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.juli_soep.school.R;
@@ -27,6 +29,8 @@ public class JurusanActivity extends AppCompatActivity implements IJurusanView,J
     boolean doubleTap = false;
     @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
+    @BindView(R.id.loading_layout)
+    RelativeLayout mLoadingIndicator;
     private JurusanPresenter presenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,5 +95,15 @@ public class JurusanActivity extends AppCompatActivity implements IJurusanView,J
     @Override
     public void onSelect(Jurusan model) {
         Toast.makeText(this, model.getKd_jurusan(),Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void showLoadingIndicator() {
+        mLoadingIndicator.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideLoadingIndicator() {
+        mLoadingIndicator.setVisibility(View.GONE);
     }
 }
